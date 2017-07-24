@@ -23,5 +23,11 @@ class Curator
     @artists << artist
   end
 
+  def add_photograph(hash)
+    final = hash.merge({id: (@photographs.count + 1)})
+    photograph = Photograph.new(final)
+    @photographs << photograph
+  end
+
 
 end

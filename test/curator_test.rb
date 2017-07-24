@@ -37,6 +37,15 @@ class CuratorTest < Minitest::Test
     assert_equal "United States", c.artists.first.country
   end
 
+  def test_we_can_add_a_photograph
+    c = Curator.new
+    c.add_photograph({name: "Moonrise, Hernandez", artist_id: 1, museum_id: 1, year: 1941})
+    assert_equal "Moonrise, Hernandez",  c.photographs.first.name
+    assert_equal 1, c.photographs.first.artist_id
+    assert_equal 1, c.photographs.first.museum_id
+    assert_equal 1941, c.photographs.first.year
+  end
+
 
 
 

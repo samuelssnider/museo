@@ -9,6 +9,6 @@ class Photograph
     @artist_id = hash[:artist_id]
     @museum_id = hash[:museum_id]
     @year = hash[:year]
-    @id = 1
+    @id = hash[:id]
   end
 end
